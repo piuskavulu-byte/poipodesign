@@ -1,0 +1,13 @@
+services:
+  - type: worker
+    name: deriv-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: DERIV_TOKEN_DEMO
+        sync: false
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: APP_ID
+        value: 1089
